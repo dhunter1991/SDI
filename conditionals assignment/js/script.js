@@ -31,7 +31,7 @@ if (temp <= 32 && rain == "yes") {
     console.log("it will not snow");
 }
 
-if (work && snow == "yes") {
+if (work !=("yes") || amountOfSnow > 0) {
 
     console.log("you do not have to go to work");
 
