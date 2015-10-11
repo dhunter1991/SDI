@@ -7,7 +7,7 @@ var snow = temp <= 32 + rain == "yes";
 
 
 
-if ("") {
+if (temp == "") {
     prompt("you forgot to input some information \n please enter in a value");
 
 }else if (temp <= 32) {
@@ -19,15 +19,26 @@ if ("") {
 
 }
 
-(rain == "yes") ? console.log ("there is a chance it will snow") : console.log ("it will not snow");
+(rain == "yes") ? console.log ("there is a chance it will snow") : console.log ("there is no precipitation for snow to develop");
 
 
 if (temp <= 32 && rain == "yes") {
-    console.log("you do not have to go to work");
+
+    console.log("it will snow about " + amountOfSnow + " inches");
+
 }else{
-    console.log("you have to go work");
+
+    console.log("it will not snow");
 }
-console.log("the expected snowfall is " + amountOfSnow + " inches");
+
+if (work && snow == "yes") {
+
+    console.log("you do not have to go to work");
+
+}else {
+
+    console.log("you have to go to work");
+}
 
 
 
