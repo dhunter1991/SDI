@@ -3,23 +3,29 @@
 // scalable data infrastructures 01
 
 
-
+// variables
 var work = prompt("do you have to work the next day");
+
+// condition of work if no input is enter a re-enter prompt will be shown
 
 if (work == "") {
 
     prompt("you forgot to input some information \n please enter yes or no");
 
+// condition if you have to work this will show the ability of making it to work based on weather conditions
+
 }else if (work == "yes") {
 
-    console.log("you have to work tomorrow, this is a check to see if snow will prevent you from working");
+    console.log("this is a check to see if snow will affect your ability to work tomorrow");
 
 }else {
+// condition if no work you can still use the code to see about the weather conditions
 
     console.log("you do not have to work tomorrow, continue to see if it will snow");
 }
+// conditions of the temperature, and if no information is entered a re-enter will be shown
 
-var temp = prompt("if it cold enough to snow, enter the temperature in fahrenheit");
+var temp = prompt("enter the expected temperature in fahrenheit");
 
 
 if (temp == "") {
@@ -35,7 +41,7 @@ if (temp == "") {
     console.log("it is not cold enough to snow");
 
 }
-
+// condition of precipitation, if no entry a re- enter prompt will be shown. If rain and temperature conditions have the ability to snow.
 var rain = prompt("is it expected to rain?");
 
 if (rain == "") {
@@ -44,13 +50,14 @@ if (rain == "") {
 
 } else if ( rain == "yes" && temp <= 32) {
 
-    console.log("there is a chance it will snow");
+    console.log("the conditions show the ability for snow to develop");
 
 }else {
 
     console.log("there is no precipitation for snow to develop");
 
 }
+// condition if there is a chance of rain enter roughly how much to determine an estimate of snowfall accumulation.
 
 if (rain == "yes") {
 
@@ -60,6 +67,7 @@ if (rain == "yes") {
 
     console.log("");
 }
+// calculation for the amount of snow that is possible
 
 var amountOfSnow = amountOfRain * 10;
 
