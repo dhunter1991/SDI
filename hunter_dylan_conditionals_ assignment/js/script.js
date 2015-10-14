@@ -4,29 +4,11 @@
 
 
 // variables
-var work = prompt("do you have to work the next day");
-
-// condition of work if no input is enter a re-enter prompt will be shown
-
-if (work == "") {
-
-    prompt("you forgot to input some information \n please enter yes or no");
-
-// condition if you have to work this will show the ability of making it to work based on weather conditions
-
-}else if (work == "yes") {
-
-    console.log("this is a check to see if snow will affect your ability to work tomorrow");
 
 
-}else {
-// condition if no work you can still use the code to see about the weather conditions
-
-    console.log("you do not have to work tomorrow, continue to see if it will snow");
-}
 // conditions of the temperature, and if no information is entered a re-enter will be shown
 
-var temp = prompt("enter the expected temperature in fahrenheit");
+var temp = prompt("enter tomorrow's expected temperature in fahrenheit");
 
 
 if (temp == "") {
@@ -40,6 +22,7 @@ if (temp == "") {
 }else {
 
     console.log("it is not cold enough to snow");
+
 
 }
 // condition of precipitation, if no entry a re- enter prompt will be shown. If rain and temperature conditions have the ability to snow.
@@ -62,16 +45,38 @@ if (rain == "") {
 
     (temp <= 32 && rain == "yes") ? console.log("it will snow about " + amountOfSnow + " inches") : console.log("it will not snow");
 
+    var work = prompt("do you have to work the next day");
+
+    var truck = true;
+
+    if (work == "yes") {
+        
+        console.log ("there is chance for snow that may effect your ability to make it to work.");
+
+        truck = confirm("do you have a truck that is 4x4 and can make it safely in the snow?  ( ok for yes, cancel for no)");
+
+        console.log("you can safely make it to work in your 4x4 truck");
+
+    }else {
+
+        console.log("congratulations! The snow will not effect your work day. ")
+    }
+
 
 }else {
 
-    console.log("there is no precipitation for snow to develop");
+    console.log("there is no chance for precipitation to develop.");
+
+    var work = prompt("do you have to work the next day");
+
+    if (work == "yes") {
+        console.log (" congratulations it should not snow, and your commute to work should be unaffected!");
+    }else {
+        console.log("Congratulations! you have the day off, but sorry no snow");
+    }
+
 
 }
-// condition if there is a chance of rain enter roughly how much to determine an estimate of snowfall accumulation.
-
-
-
 
 
 
