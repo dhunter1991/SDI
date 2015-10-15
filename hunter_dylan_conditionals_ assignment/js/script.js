@@ -10,7 +10,7 @@
 
 var temp = prompt("enter tomorrow's expected temperature in fahrenheit");
 
-
+// this prompt makes sure information is entered
 if (temp == "") {
 
     prompt("you forgot to input some information \n please enter in a value");
@@ -50,7 +50,7 @@ if (rain == "") {
     var truck = true;
 
     if (work == "yes") {
-        
+
         console.log ("there is chance for snow that may effect your ability to make it to work.");
 
         truck = confirm("do you have a truck that is 4x4 and can make it safely in the snow?  ( ok for yes, cancel for no)");
@@ -59,19 +59,20 @@ if (rain == "") {
 
     }else {
 
-        console.log("congratulations! The snow will not effect your work day. ")
+        console.log("congratulations it will snow but you should not be affected! ")
     }
 
 
 }else {
 
-    console.log("there is no chance for precipitation to develop.");
-
     var work = prompt("do you have to work the next day");
 
     if (work == "yes") {
+
         console.log (" congratulations it should not snow, and your commute to work should be unaffected!");
+
     }else {
+
         console.log("Congratulations! you have the day off, but sorry no snow");
     }
 
