@@ -47,10 +47,11 @@ if (rain == "") {
 
     var work = prompt("do you have to work the next day");
 
+    // variable to see if you have a truck to make it through the snow
     var truck = true;
 
     if (work == "yes") {
-
+// it will snow, do you have a truck to make it to work safely
         console.log ("there is chance for snow that may effect your ability to make it to work.");
 
         truck = confirm("do you have a truck that is 4x4 and can make it safely in the snow?  ( ok for yes, cancel for no)");
@@ -58,13 +59,13 @@ if (rain == "") {
         console.log("you can safely make it to work in your 4x4 truck");
 
     }else {
-
+// it will not snow your cmmute should not be affected
         console.log("congratulations it will snow but you should not be affected! ")
     }
 
 
 }else {
-
+// no chance for snow
     var work = prompt("do you have to work the next day");
 
     if (work == "yes") {
