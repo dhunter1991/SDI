@@ -2,10 +2,12 @@
 // scalable data infrastructures
 // 10/19/2015
 
-diameterArea(10);
+var death = victimsWeight(10);
 
-function diameterArea(d){
-    var diameter = 3.14 * d;
-    console.log(diameter);
+function victimsWeight(w){
+    var stings = 8.667 * w;
+    return (stings);
 }
+console.log("it will take " + death + " stings to kill this animal");
+
 
