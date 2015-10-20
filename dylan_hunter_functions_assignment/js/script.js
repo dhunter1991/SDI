@@ -8,8 +8,13 @@ var floridaLottery = prompt("will you be checking the florida lottery yes or no?
 
 
 // function for random numbers generator
+
 var getRandom = function (min,max) {   // defining
-    var number = Math.floor(Math.random() * max - min) + min;
+
+    // math function for a random number between a maximum and a minimum
+
+    var number = Math.round(Math.random() * max - min) + min;
+
     return number;
 }
 // numbers generator for the florida lottery
@@ -25,44 +30,56 @@ var powerBall = getRandom(1,59); // invoking
 var pB = getRandom(1,35); // invoking
 
 // while loop to check to make sure a yes or no value is entered to run code
+
 while (floridaLottery === ""){
+
+// this prompt will only be shown when nothing is entered into the text field as either yes or no
 
     floridaLottery = prompt("you did not enter anything \n please enter yes for florida lottery and no for Powerball.");
 }
-// variable to stop the while loop
 
-var a = 1; // used to stop the loop
-
-// while loop made for the user input for the florida lottery numbers
+// if else statement to determine which numbers will be printed out to the console
 
 if (floridaLottery == "yes") {
 
-
     var randomNumbers = [];
 
-    for (var i = 0; i <6; i++)
+// for loop to create an array of florida lottery numbers with a not operator so no two numbers in the array will equal each other
+
+    for (var i = 0; i <6; i++ && i != i)
+
+// random numbers generator using the getRandom function for numbers between 1 and 53
 
         randomNumbers [i] = getRandom(1, 53);
 
+// console log of the number array and string concentrated statment of which numbers they are
+
         console.log("these are the florida lottery numbers! " + randomNumbers);
+
+// else statement for if the user has chosen no and are looking for Powerball numbers
+
     }else{
+
+
+    if (floridaLottery == "no")
+
+
+// variable for random numbers used in the powerball lottery
+
     var randomPbNumbers = [];
 
-    for (var i =0; i < 5; i++)
+// for statement to create array of Powerball lottery numbers with a not operator for no two numbers to equal each other
+
+    for (var i =0; i < 5; i++ && i != i)
+
+// random numbers array using the function above for finding numbers and using the parameters of numbers between 1 and 59 for the powerball lottery
 
         randomPbNumbers [i] = getRandom(1,59);
 
+// console log of the powerball numbers using string concentration to say which numbers they are, also using variable PB for the powerball
+
         console.log("these are the Powerball numbers " + randomPbNumbers + " PB number " + pB);
 }
-
-    //console.log("these are the florida lottery numbers! " + [getRandom(1,53), getRandom(1,53), getRandom(1,53), getRandom(1,53),getRandom(1,53),getRandom(1,53)]);
-    //a++
-//}
-// while loop for the power ball numbers with the Powerball
-//while (floridaLottery === "no" && a < 2) {
-    //console.log( "the Powerball numbers are " + [getRandom(1, 59), getRandom(1, 59), getRandom(1, 59), getRandom(1, 59), getRandom(1, 59)] + (" and PB ") + getRandom(1, 35));
-    //a++
-//}
 
 
 
