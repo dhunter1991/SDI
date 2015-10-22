@@ -9,11 +9,11 @@ var floridaLottery = prompt("will you be checking the florida lottery yes or no?
 
 // function for random numbers generator
 
-var getRandom = function (min,max) {   // defining
+var RandomNumGen = function (min,max) {   // defining
 
     // math function for a random number between a maximum and a minimum
 
-    var number = Math.round(Math.random() * max - min) + min;
+    var number = Math.floor(Math.random() * max) + min;
 
 // sends value out of the function
 
@@ -22,15 +22,15 @@ var getRandom = function (min,max) {   // defining
 
 // numbers generator for the florida lottery
 
-var florida = getRandom(1, 53); // invoking
+var florida = RandomNumGen(1, 53); // invoking
 
 // numbers generator for the Powerball lottery
 
-var powerBall = getRandom(1,59); // invoking
+var powerBall = RandomNumGen(1,59); // invoking
 
 // number generator for the Powerball
 
-var pB = getRandom(1,35); // invoking
+var pB = RandomNumGen(1,35); // invoking
 
 // while loop to check to make sure a yes or no value is entered to run code
 
@@ -46,25 +46,27 @@ while (floridaLottery === ""){
 
 if (floridaLottery == "yes") {
 
-    var randomNumbers = [];
+// variable for the array of numbers that will be entered through the for loop for the florida lottery numbers
+
+    var floridaNumbers = [];
 
 // for loop to create an array of florida lottery numbers with a not operator so no two numbers in the array will equal each other
 
-    for (var i = 0; i <6; i++){
+    for (var i = 0; i < 6; i++) {
+
+        floridaNumbers [i] = RandomNumGen(1,53);
+
+        if([i] === [i])
+
+            continue;
+
 
 // random numbers generator using the getRandom function for numbers between 1 and 53
-
-        randomNumbers [i] = getRandom(1, 53);
-
-// console log of the number array and string concentrated statement of which numbers they are
-
-        console.log("these are the florida lottery numbers! " + randomNumbers);
-
     }
 
-// console log of the number array and string concentrated statement of which numbers they are
+    // console log of the number array and string concentrated statement of which numbers they are
 
-        console.log("these are the florida lottery numbers! " + randomNumbers);
+    console.log("these are the florida lottery numbers! " + floridaNumbers);
 
 // else statement for if the user has chosen no and are looking for Powerball numbers
 
@@ -74,7 +76,7 @@ if (floridaLottery == "yes") {
 
 // variable for random numbers used in the powerball lottery
 
-    var randomPbNumbers = [];
+    var PbNumbers = [];
 
 // for statement to create array of Powerball lottery numbers with a not operator for no two numbers to equal each other
 
@@ -82,11 +84,11 @@ if (floridaLottery == "yes") {
 
 // random numbers array using the function above for finding numbers and using the parameters of numbers between 1 and 59 for the powerball lottery
 
-        randomPbNumbers [i] = getRandom(1,59);
+        PbNumbers [i] = RandomNumGen(1,59);
 
 // console log of the powerball numbers using string concentration to say which numbers they are, also using variable PB for the powerball
 
-        console.log("these are the Powerball numbers " + randomPbNumbers + " PB number " + pB);
+        console.log("these are the Powerball numbers " + PbNumbers + " PB number " + pB);
 }
 
 
